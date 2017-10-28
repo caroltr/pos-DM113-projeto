@@ -9,7 +9,7 @@ namespace Products
     [AspNetCompatibilityRequirements(
         RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 
-    public class ServicoEstoque : IServicoEstoque
+    public class ServicoEstoque : IServicoEstoque, IServicoEstoqueV2
     {
         public bool AdicionarEstoque(string numeroProduto, int quantidade)
         {
@@ -40,7 +40,16 @@ namespace Products
 
         public int ConsultarEstoque(string numeroProduto)
         {
-            return VerProduto(numeroProduto).EstoqueProduto;
+            Produto p = VerProduto(numeroProduto);
+
+            if (p == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return p.EstoqueProduto;
+            }
         }
 
         public bool IncluirProduto(Produto produto)
@@ -183,7 +192,7 @@ namespace Products
                     ProdutoEstoque matchingProduct = database.Products.First(
                         p => String.Compare(p.NumeroProduto, numeroProduto) == 0);
 
-                    if(matchingProduct == null)
+                    if (matchingProduct == null)
                     {
                         return null;
                     }

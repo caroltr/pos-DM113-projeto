@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://projetoavaliativo.dm113/01" elementFormDefault="qualified" targetNamespace="http://projetoavaliativo.dm113/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:51216/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Products" />
   <xs:element name="ListarProdutos">
     <xs:complexType>

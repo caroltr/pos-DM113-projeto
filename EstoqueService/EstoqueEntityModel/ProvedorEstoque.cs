@@ -15,9 +15,9 @@ namespace EstoqueEntityModel
     public class ProdutoEstoque
     {
         public int Id { get; set; }
-        public string NumeroProduto { get; set; } // (chave primária), nchar(10), Não permite nulos
-        public string NomeProduto { get; set; } // nchar(20), Não Permite nulos
-        public string DescricaoProduto { get; set; } // nchar(50), Permite nulos
-        public int EstoqueProduto { get; set; } // Permite nulos
+        public string NumeroProduto { get; set; }
+        public string NomeProduto { get; set; }
+        public string DescricaoProduto { get; set; }
+        public int EstoqueProduto { get; set; }
     }
 }

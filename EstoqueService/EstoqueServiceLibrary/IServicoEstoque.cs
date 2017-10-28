@@ -21,7 +21,7 @@ namespace Products
         public int EstoqueProduto;
     }
 
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://projetoavaliativo.dm113/01")]
     public interface IServicoEstoque
     {
         [OperationContract]
@@ -44,5 +44,18 @@ namespace Products
 
         [OperationContract]
         Produto VerProduto(String numeroProduto);
+    }
+
+    [ServiceContract(Namespace = "http://projetoavaliativo.dm113/02")]
+    public interface IServicoEstoqueV2
+    {
+        [OperationContract]
+        bool AdicionarEstoque(String numeroProduto, int quantidade);
+
+        [OperationContract]
+        bool RemoverEstoque(String numeroProduto, int quantidade);
+        
+        [OperationContract]
+        int ConsultarEstoque(String numeroProduto);
     }
 }

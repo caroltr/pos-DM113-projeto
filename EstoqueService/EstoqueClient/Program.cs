@@ -1,5 +1,4 @@
-﻿using System.ServiceModel;
-using EstoqueClient.ServicoEstoque;
+﻿using EstoqueClient.EstoqueServicoReferencia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +13,6 @@ namespace EstoqueClient
             Console.ReadLine();
 
             // ServicoEstoqueClient proxy = new ServicoEstoqueClient();
-            // ServicoEstoqueClient proxy = new ServicoEstoqueClient("NetTcpBinding_IServicoEstoque");
              ServicoEstoqueClient proxy = new ServicoEstoqueClient("BasicHttpBinding_IServicoEstoque");
 
             // Testando método "ListarProdutos"
