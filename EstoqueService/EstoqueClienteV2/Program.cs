@@ -1,4 +1,4 @@
-﻿using EstoqueClienteV2.EstoqueServicoReferencia;
+﻿using EstoqueClienteV2.ServicoEstoque;
 using System;
 
 namespace EstoqueClienteV2
